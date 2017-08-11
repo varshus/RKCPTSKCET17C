@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+
+
+<style>
+body{
+background-color:#AAAAAA;
+background-repeat: x-repeat;
+background-position: bottom;
+background-attachment:fixed;
+
+}
+h2,h3{
+color:blue;
+margin:auto;
+text-align:center;
+}
+</style>
+
+<meta charset="utf-8"> 																								<!--default character set is utf-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">												<!--bootstrap uses mobile-first styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">					<!--Latest compiled and minified CSS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>								<!-- jQuery library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>							<!-- Latest compiled JavaScript -->
+<script>
+function verify()
+	{
+	var a=document.getElementById("identity").value;
+	var b=a.indexOf("c");
+	var c=a.indexOf("p");
+	var d=a.indexOf("C");
+	var e=a.length;
+	var f=a.substring(3,8);
+	if(b==0 & c==1 & d==2 & e==9 & isNaN(f)==0)
+		{
+		alert("logged in");
+		window.location.href = "doc1";
+		}
+	else
+		{
+		alert("Admin login");
+		document.getElementById("identity").focus();
+		return false;
+		}
+	}
+</script>
+</head>
+<body>
+<h5><a href="/" style="color:blue;float:right">Go to Home</a></h5><br>
+<div class="panel panel-default">
+<h2 style="color:blue">Welcome to CPC Have a Happy shopping</h2>
+</div>
+
+<div class="panel panel-default" align=center>
+<img src="https://openclipart.org/download/216846/doctor_white_coat.svg" height="300" width="300">
+</div>
+<form>
+<table align=center class="table table-bordered">
+<tr>
+<td>Enter your Admin code:</td><td><input type="text" id="identity" value=""></td>
+<tr><br>
+</table>
+<div><input type="button" value="Login" onclick="verify()" class="btn btn-success"></div>
+
+</body>
+</html>
